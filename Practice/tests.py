@@ -5,11 +5,7 @@ URL = "https://reqres.in"
 
 
 class TestAPI:
-    @staticmethod
-    def CommontestCreation():
+    def test_api(self):
         data = SpookyUserGEN().gen()
         response = SpookyUserAPI(URL).creation(data)
         assert response.status_code == 201
-
-
-TestAPI().CommontestCreation()
